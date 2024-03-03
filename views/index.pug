@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1= title
+  each livre in livres
+    h2= livre.titre
+    p= livre.auteur
+    p #{livre.page} pages
+    ul
+      each genre in livre.genres
+        li= genre
